@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.print("Enter Two Numbers : ");
+	    int n1 = sc.nextInt();
+	    int n2 = sc.nextInt();
+	    int lcm = LCM(n1,n2);
+	    System.out.println("The LCM of "+n1+" and "+n2+" is : "+lcm);
+	}
+	public static int LCM(int a, int b)
+	{
+	    int min = Math.min(a,b);
+	    int hcf = 1;
+	    int i,lcm;
+	    for (i=1;i<=min;i++)
+	    {
+	        if(a%i == 0 && b%i == 0)
+	        {
+	            hcf = i;
+	        }
+	    }
+	    lcm=(a*b)/hcf;
+	    return lcm;
+	}
+}

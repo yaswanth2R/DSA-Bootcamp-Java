@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.print("Enter the value of n and r : ");
+	    int n = sc.nextInt();
+	    int r = sc.nextInt();
+	    int per = permutation(n,r);
+	    int com = combination(n,r);
+	    System.out.print("Permutation of "+n+" and "+r+" is : "+per);
+	    System.out.print("\nCombination of "+n+" and "+r+" is : "+com);
+	    
+	}
+	public static int permutation(int n, int r)
+	{
+	    int permu;
+	    permu = factorial(n)/factorial(n-r);
+	    return permu;
+	}
+	public static int combination(int n, int r)
+	{
+	    int comb;
+	    comb = factorial(n)/(factorial(r)*factorial(n-r));
+	    return comb;
+	}
+	public static int factorial(int n)
+	{
+	    int factorial=1;
+	    int i;
+	    for(i=1;i<=n;i++)
+	    {
+	        factorial = factorial*i;
+	    }
+	    return factorial;
+	}
+}

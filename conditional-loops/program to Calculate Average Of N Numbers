@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main
+{
+  public static void main (String[]args)
+  {
+    Scanner sc = new Scanner (System.in);
+    System.out.print ("Enter the Numbers of numbers : ");
+    int n = sc.nextInt ();
+    int num, sum = 0;
+    int i=1;
+    System.out.print ("Enter the Numbers : ");
+    while (i <= n)
+    {
+	num = sc.nextInt ();
+	sum = sum + num;
+	i++;
+    }
+    int avg = sum / n;
+    System.out.print ("The Average of " + n + " Numbers are : " + avg);
+  }
+}

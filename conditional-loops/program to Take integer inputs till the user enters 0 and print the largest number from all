@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner sc = new Scanner(System.in);
+	    System.out.print("Enter the Numbers : ");
+	    int num,vari=0;
+	    while(true)
+	    {
+	        num = sc.nextInt();
+	        if(num==0)
+	            break;
+	        if(num>vari)
+	        {
+	            vari = num;
+	        }
+	    }
+	    System.out.print("The Largest Number is : "+vari);
+	}
+}

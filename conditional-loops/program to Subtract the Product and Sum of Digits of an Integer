@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner sc = new Scanner(System.in);
+	    System.out.print("Enter the Number : ");
+	    int num = sc.nextInt();
+	    int rem,sum=0,prod=1;
+	    int diff;
+	    while(num!=0)
+	    {
+	        rem = num%10;
+	        sum=sum+rem;
+	        prod=prod*rem;
+	        num=num/10;
+	    }
+	    diff=prod-sum;
+	    System.out.print("\nThe Difference between the product and sum of a number is : "+diff);
+	}
+}

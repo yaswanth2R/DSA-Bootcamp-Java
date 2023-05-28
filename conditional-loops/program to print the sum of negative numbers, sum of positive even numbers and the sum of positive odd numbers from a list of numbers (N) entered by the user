@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.print("Enter a Number : ");
+	    int negative_sum=0,even_sum=0,odd_sum=0;
+	    while(true)
+	    {
+	        int num = sc.nextInt();
+	        if(num == 0)
+	            break;
+	        if(num < 0)
+	            negative_sum = negative_sum+num;
+	        else
+	        {
+	            if (num%2 == 0)
+	                even_sum = even_sum+num;
+	            else
+	                odd_sum = odd_sum+num;
+	        }
+	    }
+	    System.out.println("The Sum of Negative Integers are : "+negative_sum);
+	    System.out.println("The Sum of Even Positive Integers are : "+even_sum);
+	    System.out.println("The Sum of Odd Positive Integers are : "+odd_sum);
+	}
+}
