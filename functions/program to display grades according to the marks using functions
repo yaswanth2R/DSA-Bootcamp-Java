@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner sc = new Scanner(System.in);
+	    System.out.print("Enter your Marks(out of 100) : ");
+	    int marks = sc.nextInt();
+	    Marks(marks);
+	}
+	public static int Marks(int m)
+	{
+	    if(m>=91 && m<=100)
+	            System.out.print("Your Grade is AA");
+	    else if(m>=81 && m<=90)
+	            System.out.print("Your Grade is AB");
+	    else if(m>=71 && m<=80)
+	            System.out.print("Your Grade is BB");
+	    else if(m>=61 && m<=70)
+	            System.out.print("Your Grade is BC");
+	    else if(m>=51 && m<=60)
+	            System.out.print("Your Grade is CD");
+	    else if(m>=41 && m<=50)
+	            System.out.print("Your Grade is DD");
+	    else
+	        System.out.print("Your Grade is Fail");
+	
+	    return 0;
+	}
+}

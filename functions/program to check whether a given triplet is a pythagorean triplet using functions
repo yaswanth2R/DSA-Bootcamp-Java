@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner sc = new Scanner(System.in);
+	    System.out.print("Enter a First Number : ");
+	    int num1 = sc.nextInt();
+	    System.out.print("Enter a Second Number : ");
+	    int num2 = sc.nextInt();
+	    System.out.print("Enter a Third Number : ");
+	    int num3 = sc.nextInt();
+	    Triplet(num1,num2,num3);
+	}
+	public static int Triplet(int a, int b, int c)
+	{
+	    double square_sum;
+	    square_sum = Math.pow(a,2) + Math.pow(b,2);
+	    if(Math.pow(c,2) == square_sum)
+	        System.out.print(a+","+b+" and "+c+" are Pythagorean Triplets");
+	    else
+	        System.out.print(a+","+b+" and "+c+" are not Pythagorean Triplets");
+	    return 0;
+	}
+}

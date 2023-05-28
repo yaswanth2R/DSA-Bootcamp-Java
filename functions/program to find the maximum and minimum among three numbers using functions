@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.println("Enter First Number : ");
+	    int num1 = sc.nextInt();
+	    System.out.println("Enter Second Number : ");
+	    int num2 = sc.nextInt();
+	    System.out.println("Enter Third Number : ");
+	    int num3 = sc.nextInt();
+	    int maximum = Maximum(num1,num2,num3);
+	    int minimum = Minimum(num1,num2,num3);
+	    System.out.println("The Maximum Number is : "+maximum);
+	    System.out.println("The Minimum Number is : "+minimum);
+	}
+	public static int Maximum(int a, int b, int c)
+	{
+	    int max = Math.max(Math.max(a,b),c);
+	    return max;
+	}
+	public static int Minimum(int a, int b, int c)
+	{
+	    int min = Math.min(Math.min(a,b),c);
+	    return min;
+	}
+}
