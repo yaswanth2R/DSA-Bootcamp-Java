@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter Principal, Time and Rate : ");
+		float p = input.nextFloat();
+		float t = input.nextFloat();
+		float r = input.nextFloat();
+		float SI = ((p*t*r)/100);
+		System.out.println("The Simple Interest is : "+SI);
+	}
+}
