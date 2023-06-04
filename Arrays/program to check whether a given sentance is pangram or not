@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main
+{
+    public static void main (String[] args) 
+    {
+       Scanner sc = new Scanner(System.in);
+       System.out.print("Enter the String : ");
+       String sen = sc.nextLine();
+       boolean isPangram = Pangram(sen);
+       if(isPangram)
+        System.out.print("The Sentance is a Pangram.");
+       else 
+        System.out.print("The Sentance is not a Pangram");
+    }
+    public static Boolean Pangram(String sentance)
+    {
+        for(char i='a';i<='z';i++)
+        {
+            if(sentance.indexOf(i)<0)
+                return false;
+        }
+        return true;
+    }
+}

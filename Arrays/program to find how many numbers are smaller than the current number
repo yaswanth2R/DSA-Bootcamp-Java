@@ -1,0 +1,35 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class Main
+{
+    public static void main (String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        Main m = new Main();
+        System.out.print("Enter the no of array elements : ");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        System.out.print("Enter the Array elements : ");
+        for(int i=0;i<n;i++)
+        {
+            arr[i] = sc.nextInt();
+        }
+        int[] ans = m.Smalestnumbercount(arr,n);
+        System.out.print("The Smallest Number Count of Array Elements are : "+Arrays.toString(ans));
+    }
+    public static int[] Smalestnumbercount(int[] arr, int size)
+    {
+        int[] res = new int[size];
+        for(int i=0;i<size;i++)
+        {
+            int count = 0;
+            for(int j=0;j<size;j++)
+            {
+                if(arr[j]<arr[i])
+                    count++;
+            }
+            res[i] = count;
+        }
+        return res;
+    }
+}

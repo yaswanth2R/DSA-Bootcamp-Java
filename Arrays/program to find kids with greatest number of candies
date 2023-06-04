@@ -1,0 +1,41 @@
+import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of kids: ");
+        int n = sc.nextInt();
+        int[] candies = new int[n];
+        int extra_candies;
+        int i;
+        System.out.print("Enter the number of candies for each kid : ");
+        for(i = 0; i < n; i++) {
+            candies[i] = sc.nextInt();
+        }
+        
+        System.out.print("Enter the extra candies: ");
+        extra_candies = sc.nextInt();
+        
+        List<Boolean> result = kids_candies(candies, extra_candies);
+        System.out.println("Results: " + result);
+    }
+    
+    public static List<Boolean> kids_candies(int[] candies, int extra) {
+        int max_candy = 0;
+        for(int candy : candies) {
+            max_candy = Math.max(candy, max_candy);
+        }
+        
+        List<Boolean> result = new ArrayList<>();
+        for(int curr_candy : candies) {
+            if(curr_candy + extra >= max_candy) {
+                result.add(true);
+            } else {
+                result.add(false);
+            }
+        }
+        
+        return result;
+    }
+}

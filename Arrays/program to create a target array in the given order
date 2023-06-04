@@ -1,0 +1,46 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+public class Main
+{
+    public static void main (String[] args) 
+    {
+       Scanner sc = new Scanner(System.in);
+       System.out.print("Enter the Size of Array : ");
+       int n = sc.nextInt();
+       int[] arr = new int[n];
+       int[] index = new int[n];
+       System.out.print("Enter the Array Elements : ");
+       for(int i=0;i<n;i++)
+       {
+           arr[i] = sc.nextInt();
+       }
+       System.out.print("Enter the Array Indices in which the new array has to be inserted : ");
+       for(int i=0;i<n;i++)
+       {
+           index[i] = sc.nextInt();
+       }
+       int[] res = target_array(n,arr,index);
+       System.out.print("The Target Array is : ");
+       for(int i:res)
+       {
+           System.out.print(i+" ");
+       }
+       
+    }
+    public static int[] target_array( int size, int[] arr, int[] ind)
+    {
+        List<Integer> target = new ArrayList<>();
+        for(int i=0;i<size;i++)
+        {
+            target.add(ind[i],arr[i]);
+        }
+        int[] Target_Array = new int[size];
+        for(int i=0;i<size;i++)
+        {
+            Target_Array[i] = target.get(i);
+        }
+        return Target_Array;
+    }
+}
